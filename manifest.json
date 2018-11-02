@@ -1,0 +1,35 @@
+{
+    "manifest_version": 2,
+    "name": "OSIP",
+    "author": "Mihir Jha",
+    "version": "2.8",
+    "description": "Oracle Support Internal Project: Manage SR in Implementation/DSE Portal",
+    "icons": {
+        "48": "icons/DSE.png"
+    },
+	"applications": {
+	  "gecko": {
+		"id": "mihir.jha@oracle.com"
+		}
+	},
+    "background":{
+        "scripts":["mjBackground.js"]
+    },
+    "browser_action":{
+		"default_icon": "icons/DSE.png",
+		"default_title": "OSIP",
+		"default_popup": "popup/updatesr.html"
+    },
+    "permissions": [
+		"tabs",
+		"notifications",
+		"https://*/",
+		"storage"
+   ],
+   "content_scripts": [
+  {
+    "matches": ["*://support.us.oracle.com/oip/faces/secure/srm/srview/SRTechnical.jspx?action=*"],
+    "js": ["popup/view.js"]
+  }
+  ]
+}

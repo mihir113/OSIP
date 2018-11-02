@@ -1,0 +1,467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>OSIP</title>
+<link rel="stylesheet" type="text/css" href="view.css" media="all">
+<script type="text/javascript" src="view.js"></script>
+</head>
+<body id="main_body">
+
+<div id="preLoader">
+	<img src="/icons/Processing.gif"></img>
+</div>
+
+<!--Hidden Field Start-->
+      <input id="csiHidden" type="hidden" name="csiHidden" >
+<!-- Contact Service Team -->
+      <div id ="hover_bkgr_fricc_conServiceTeam" class="hover_bkgr_new_contact_team">
+         <span class="helper"></span>
+         <div style ="font-family: Segoe UI;">
+            <p>Service Team Has Been Notified Via An Automated Email</p>
+			<p>Please Do Not Resubmit This Request </p>
+			<p>ETA - 10 Mins</p>
+            <div id="popupAccept">
+               <button id="btnOKconServiceTeam" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Contact Service Team -->
+<div id ="hover_bkgr_fricc_syncSRComplete" class="hover_bkgr_new">
+ <span class="helper"></span>
+ <div style ="font-family: Segoe UI;">
+	<p>Sync Complete</p>
+	<p>Please Check The Project In Portal</p>
+	<div id="popupAccept">
+	   <button id="btnOKsyncSRComplete" type=button>OK</button>
+	</div>
+ </div>
+</div>
+
+<div id ="hover_bkgr_fricc_networkError" class="hover_bkgr_new">
+ <span class="helper"></span>
+ <div style ="font-family: Segoe UI;">
+	<p>Network Error</p>
+	<p>Please Try Again Later</p>
+	<div id="popupAccept">
+	   <button id="btnOKNetworkError" type=button>OK</button>
+	</div>
+ </div>
+</div>
+
+<!-- SR Update Completed -->
+      <div id ="hover_bkgr_fricc_srUpdate" class="hover_bkgr_new">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>SR Updated In Project Successfully</p>
+            <div id="popupAccept">
+               <button id="btnOKServerUpdate" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- SR Create Completed -->
+      <div id ="hover_bkgr_fricc_srCreate" class="hover_bkgr_new">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>SR Added To Project Successfully</p>
+            <div id="popupAccept">
+               <button id="btnOKServerCreate" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- SR Closed Completed -->
+      <div id ="hover_bkgr_fricc_srClosed" class="hover_bkgr_new">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>SR Closed In Project Successfully</p>
+            <div id="popupAccept">
+               <button id="btnOKServerClosed" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Project Not Available in Portal-->
+      <div id ="hover_bkgr_fricc_noProject" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+           <p>No Projects Available! </p>
+              <p> Please Create Customer Project In Impl. Portal</p>
+            <div id="popupAccept">
+               <button id="btnOKNoProject" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Milestone Not Available in Portal-->
+      <div id ="hover_bkgr_fricc_noMilestone" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>No Active Milestones Available For Project</p>
+            <div id="popupAccept">
+               <button id="btnOKNoMilestone" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Milestone Not Available in Portal-->
+      <div id ="hover_bkgr_fricc_requiredFields" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>Please Enter Data For Required Fields</p>
+            <div id="popupAccept">
+               <button id="btnOKRequiredFields" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- SR Page not loaded successfully-->
+      <div id ="hover_bkgr_fricc_noSR" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>Please allow the SR page to load completely</p>
+            <div id="popupAccept">
+               <button id="btnOKNoSR" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Timeout Error Div -->
+      <div id ="hover_bkgr_fricc_error" class="hover_bkgr_fricc">
+         <span class="helper"></span>
+         <div>
+            <p>Server Failed To Respond, Please Try Again!</p>
+            <div id="popupAccept">
+               <button id="btnOKServerError" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+	    <!-- Reset Extension Confirmation Box-->
+      <div id ="hover_bkgr_fricc_resetExtension" class="hover_bkgr_proj">
+		 <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;font-weight:bold">
+		 <div id="popupCloseResetButton" class="popupCloseButton">X</div>
+				<span id ="userNameHolder">
+						<!-- Placeholder for dynamic link, do not remove -->
+				</span>
+				<span id ="versionHolder">
+						<!-- Placeholder for dynamic link, do not remove -->
+				</span>
+            <div id="popupAccept">
+			   <center>
+			   <button id="btnYesReset" type=button class="button_input">Reset Extension</button>
+				   <div>
+						<button id="btnDisableNotification" type=button class="button_input">Disable Notifications</button>
+				   </div>
+				   <div>
+						<button id="btnEnableNotification" type=button class="button_input">Enable Notifications</button>
+				   </div>
+			   </center>
+            </div>
+         </div>
+      </div>
+	  <!--Enable Notifications Confirmation -->
+	  <div id ="hover_bkgr_fricc_enableNotifications" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>Notifications are now enabled</p>
+			<p>You can come back anytime and disable it</p>
+            <div id="popupAccept">
+               <button id="btnOKErrEnabledNotification" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+	  <!--Disable Notifications Confirmation -->
+	  <div id ="hover_bkgr_fricc_disableNotifications" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+			<p>Notifications for this app are now disabled</p>
+			<p>You can come back anytime and enable it again</p>
+            <div id="popupAccept">
+               <button id="btnOKErrDisabledNotification" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+	  <!-- Loader Popup -->
+      <div id ="hover_bkgr_fricc_loader" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <div id="loader1">
+				<img src="/icons/Processing.gif"></img>
+			</div>
+         </div>
+      </div>
+	  <!-- Incorrect User-->
+      <div id ="hover_bkgr_fricc_errUsername" class="hover_bkgr_proj">
+         <span class="helper"></span>
+         <div style ="font-family: Lucida Console, Monaco, monospace;">
+            <p>Incorrect Email, Please Enter Your Own Email Address</p>
+			<p>Try Again!</p>
+            <div id="popupAccept">
+               <button id="btnOKErrUsername" type=button>OK</button>
+            </div>
+         </div>
+      </div>
+<!-- Start New User Section Start -->
+	<div id="initialize_user" class ="initialize_user">
+         <div id ="hover_bkgr_fricc" class="hover_bkgr_fricc">
+            <span class="helper"></span> 
+            <div>
+               <div id="popupCloseButton" class="popupCloseButton">X</div>
+               <p>WARNING: You have requested access to a system containing data classified as Confidential- Highly Restricted under Oracle's <a href="https://my.oracle.com/content/web/CNT1207582" target="_blank">Information Protection Policy</a>. You may access this system only <br/>
+                  (1) in connection with providing Support services to the identified customer or <br/>
+                  (2) for other legitimate business purposes approved in advance by Oracle executive management.
+               </p>
+               <div id="popupAccept">
+                  <button id="btnAccept" type=button>Accept & Continue</button>
+               </div>
+            </div>
+         </div>
+		<div class="newUserReg">
+		<center>
+			<img src="/icons/Header_Logo.png" style="height:40px;width:300px;" width="10">
+			<br/>
+			</center>
+			<div class="newUserReg1">
+				<center>
+				<h1>NEW USER REGISTRATION</h1>
+				</center>
+			</div>
+			<div class="newUserInputArea">
+				<label for="email">Your Oracle Email:</label>
+				<input type="email" id="email_add" name="email_add" width="10">
+				<br/>
+			</div>
+			<div class="newUserReg1" style="width:auto;">
+				<button id="btnUpdateEmail" type=button class="button_input">Register</button>
+				<p>Note: This is a one-time activity for registering this application for your user on <strong>this</strong> browser.</p>
+			</div>
+			<br/>
+		</div>
+      </div>
+	<!-- New User Section Complete -->
+<!--Error Message-->
+<div id="error_content" class="errorSection">
+	<center>
+		<table style="height: 150px;">
+			<tbody>
+				<tr>
+					<td style="text-align: center;"><img src="/icons/notification_error.png" style="height:auto;width:auto;align=left;"></td>
+	</center>
+					<td style="width: auto;text-align: center;">
+					<strong>
+						<p>This app only works on Classic MOS SR pages</p>
+						<p>Navigate to an existing SR to use this App</p>
+						<p>Note: Ensure you are connected to an Oracle network.</p></strong>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+</div>
+<!--Error Message Complete-->
+<!-- Outer Div Start -->
+<div id ="outer_div">
+	<div id="header_1">
+		<img src="/icons/Header_Logo.png" style="height:40px;width:300px;float:left;" width="10">
+		<input class="header_1" type="image" id="btnResetExtn" src="/icons/Settings.png" style="height:40px;width:40px;float:right;border: 0;" width="10" title="Settings" alt="Settings">
+		<a href="https://apex.oraclecorp.com/pls/apex/f?p=14499:7:::NO:::" target="_blank"><img src="/icons/whatsNew.png" style="height:40px;width:40px;float:right;border: 0;" width="10" title="More Info" alt="More Info"></a>
+		<br/>
+		<br/>
+	</div>
+	<!-- Subtab Region Buttons -->
+	<div id="divSubtab">
+		<button id="btnShowSR" class="tablink">Manual Sync</button>
+		<button id="btnSyncTeam" class="tablink">Auto Sync</button>
+		<button id="btnShowImplTeam" class="tablink">Contact Team</button>
+		<br/>
+		<br/>
+	</div>
+	<div class="main_container">
+		<!--Following Region is for 1st tab for SR Updates -->
+		<div id="srSectionDiv" class="srSectionDiv">
+			<div>
+				<label id = "lblSRNumber" class="description" for="element_1">SR #: </label>
+				<input id="element_1" name="element_1" class="element text medium1" type="text" maxlength="255" value="" style ="opacity: 0.7;" readonly="readonly"/>
+			</div>
+			<div>
+				<label for="srOwner">SR Owner:</label>
+				<input id="srOwner" name="srOwner" type="email" maxlength="255" value="" style ="opacity: 0.7;" readonly="readonly"/>
+			</div>
+			<div>
+				<label for="srStatusSelect">SR Status:</label>
+				<select id="srStatusSelect" >
+					<option value="Open">Open</option>
+					<option value="Closed">Closed</option>
+					<option value="New">New</option>
+				</select>
+			</div>
+			<div>
+				<label for="severity">MOS Severity:</label>
+				<select id="severity">
+					<option value="1">1-Critical</option>
+					<option value="2">2-Significant</option>
+					<option value="3">3-Standard</option>
+					<option value="4">4-Minimal</option>
+				</select>
+			</div>
+			<div id="projDiv">
+				<label for="projName">Project Name:</label>
+				<select name="projName" id="projName">
+					<option value="0" disabled selected>Select</option>
+				</select>
+			</div>
+			<div id="imptMilestone">
+				<label for="actItem">Impacts Milestone:</label>
+				<select id="actItem" name="actItem">
+					<option value="N">No</option>
+					<option value="Y">Yes</option>
+				</select>
+			</div>
+			<div id="milestoneDiv">
+				<label for="selMilestone">Select Milestone: </label>
+				<select name="selMilestone" id="selMilestone">
+					<option value="" disabled selected>Select</option>
+				</select>
+			</div>
+			<div id="divLastUpdated" style="display:none">
+				<label for="txtLastUpdDate">Last Portal Update: </label>
+				<input id="txtLastUpdDate" name="txtLastUpdDate"type="text" maxlength="255" value="" style ="opacity: 1.0;" readonly="readonly"/>
+			</div>
+			<div id="srSummaryDiv">
+				<label for="summaryTxt">SR Summary: </label>
+				<input id="summaryTxt" name="summaryTxt" type="text" maxlength="255" value=""/>
+			</div>
+			<div id="lblSRUpd1">
+				<label id="lblSRUpdate" class="description" for="element_2">SR Status Update:</label>
+			</div>
+			<div id="divSRClose1">
+				<label id="lblSRClose1" class="description" for="element_2">SR Closed Comments:</label>
+				<div>
+					<textarea id="element_2" name="element_2" auto-resize title = "Provide An Update For Implementation Portal" alt="Provide An Update For Implementation Portal" style="width:600px;"></textarea>
+				</div>
+			</div>
+			<br/>
+			<center>
+				<input class="button_input" id="saveForm" type="submit" name="submit" value="Submit" />
+			</center>
+			<br/>
+		</div>
+
+		<!--Synchronize SRs - Start -->
+
+		<div id="synchSRDiv" class="implTeam" style="display:none">
+			<div>
+			<center><strong><p>This Feature Is Currently For Developer Preview Only !</p></strong></center>
+			<br/>
+				<div>
+					<label id = "lblSRNumber" class="description" for="csiInput">CSI: </label>
+					<input id="csiInput" name="csiInput"  type="text" maxlength="255" value="" style ="opacity: 0.7;" readonly="readonly"/>
+				</div>
+				<div>
+					<label for="syncProdName">Customer's Product List:</label>
+					<select name="syncProdName" id="syncProdName">
+						<option value="">Select</option>
+					</select>
+				</div>
+				<div>
+					<label for="syncProjName">Project:</label>
+					<select name="syncProjName" id="syncProjName">
+						<option value="">Select</option>
+					</select>
+				</div>
+				<div>
+					<center>
+						<button id="syncSR" class="button_input">Sync Open SRs To This Project</button>
+						<button id="syncSRClosed" class="button_input">Sync Closed SRs To This Project</button>
+						<div class="info">
+						<p>Sync Activity Pulls Updates From MOS and Updates The SRs Associated To These Projects In Portal.Check FAQs For More Info</p>
+						<p></p>
+						</div>
+					</center>
+
+				</div>
+			</div>
+		</div>
+
+		<!--Synchronize SRs - End -->
+
+		<!-- Contact Impl Team -->
+		<div id="implTeamDiv" class="implTeam" style="display:none">
+			<div>
+				<div>
+					<label id = "lblimplTeamCSI" for="implTeamCSI">CSI: </label>
+					<input id="implTeamCSI" name="implTeamCSI" type="text" maxlength="255" value="" style ="opacity: 0.7;" readonly="readonly"/>
+				</div>
+				<div>
+					<label id = "lblimplTeamSR" for="implTeamSR">SR #: </label>
+					<input id="implTeamSR" name="implTeamSR" type="text" maxlength="255" value="" style ="opacity: 0.7;" readonly="readonly"/>
+				</div>
+				<div>
+					<label for="lblimpProjName">Project Name:</label>
+					<select name="impProjName" id="impProjName">
+						<option value="0" disabled selected>Select</option>
+					</select>
+				</div>
+				<div>
+					<label for="implTeam">Project Team Member:</label>
+					<select name="implTeam" id="implTeam">
+						 <option value="0" disabled selected >Select</option>
+					</select>
+				</div>
+				<div>
+					<label for="implManager">Support Manager:</label>
+					<select name="implManager" id="implManager">
+						<option value="0" disabled selected >Select</option>
+					</select>
+				</div>
+				<div>
+					<label for="contactReason">Reason:</label>
+					<select name="contactReason" id="contactReason">
+					        <option value="0" disabled selected>Select</option>
+							<option value="SR Reassignment Request">SR Reassignment Request</option>
+							<option value="Escalate SR">Escalate SR</option>
+							<option value="Query Related To This Customer / SR">Query Related To This Customer / SR</option>
+						</select>
+					</select>
+				</div>
+				<div>
+				<center>
+						<button id="contactTeam" class="button_input">Contact Team</button>
+							<div class="danger">
+						<p><strong>Note !</strong> This action triggers an automated email to above selected team</p>
+						</center>
+			   </div>
+				</div>
+			</div>
+		</div>
+		<center>
+	<span id ="portalLink">
+						<!-- Placeholder for dynamic link, do not remove -->
+					 </span>
+					 </center>
+</div>
+	</div> <!-- Main Container End-->
+
+<!-- Outer Div Closed -->
+</body>
+   <script src=manageStorage.js></script>
+   <script src=initNewUser.js></script>
+   <script src=checkConnection.js></script>
+   <script src=srCSIFromMOS.js></script>
+   <script src=errorHandling.js></script>
+   <script src=checkUserEmail.js></script>
+   <script src="/popup/manualSync/projectDetails.js"></script>
+   <script src="/popup/manualSync/srDetailsFromMOS.js"></script>
+   <script src="/popup/manualSync/srUpdateFromImplPortal.js"></script>
+   <script src="/popup/manualSync/updateOpenSRInPortal.js"></script>
+   <script src="/popup/manualSync/closeOpenSRInPortal.js"></script>
+   <script src="/popup/manualSync/createNewSRInPortal.js"></script>
+   <script src="/popup/manualSync/getMilestones.js"></script>
+   <script src="/popup/manualSync/setMilestones.js"></script>
+   <script src="/popup/manualSync/ownerSeverityUpdateFromMOS.js"></script>
+   <script src="/popup/autoSync/syncSRinPortal.js"></script>
+   <script src="/popup/autoSync/getOpenSRForProject.js"></script>
+   <script src="/popup/autoSync/srClosedDetailsFromMOS.js"></script>
+   <script src="/popup/autoSync/srOpenDetailsFromMOS.js"></script>
+   <script src="/popup/autoSync/getProjectDetailsForSync.js"></script>
+   <script src="/popup/autoSync/syncCloseSRinPortal.js"></script>
+   <script src="/popup/autoSync/getProductListForCustomer.js"></script>
+   <script src="/popup/contactTeam/getProductNames.js"></script>
+   <script src="/popup/contactTeam/getProductProjects.js"></script>
+   <script src="/popup/contactTeam/getServiceTeam.js"></script>
+   <script src="/popup/contactTeam/ContactServiceTeam.js"></script>
+</html>
